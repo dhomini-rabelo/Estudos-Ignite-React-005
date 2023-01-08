@@ -25,10 +25,10 @@ jobs:
       - run: cd projects/stage05 && npm i
 
       - name: Publish to NPM
+        cwd: projects/stage05
         id: changesets
         uses: changesets/action@v1
         with:
-          working-directory: projects/stage05
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
