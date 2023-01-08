@@ -17,11 +17,7 @@ jobs:
         with:
           node-version: 16
 
-      - run: cd projects/stage05/packages
-
-      - run: npm i
-
-      - run: npm run build
+      - run: cd projects/stage05/packages && npm i && npm run build
 
       - name: Deploy storybook
         working-directory: ./packages/docs
