@@ -19,7 +19,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - run: cd projects/stage05/packages && npm i && npm run build
+      - run: cd projects/stage05 && npm i && npm run build
         env:
             TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 

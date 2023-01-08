@@ -22,15 +22,15 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - run: npm ci
+      - run: cd projects/stage05 && npm i
 
       - name: Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run release
+          publish: cd projects/stage05 && npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: rocketseat
