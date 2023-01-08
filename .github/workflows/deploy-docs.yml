@@ -21,7 +21,7 @@ jobs:
 
       - run: cd projects/stage05/packages && npm i && npm run build
         env:
-            TURBO_TOKEN: 3DNSPXuCy9DjTQPlfKYEyZm4
+            TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
       - name: Deploy storybook
         working-directory: projects/stage05/packages/docs
