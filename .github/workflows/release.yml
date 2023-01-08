@@ -25,13 +25,11 @@ jobs:
       - run: cd projects/stage05 && npm i
 
       - name: Publish to NPM
-        working-directory: projects/stage05
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run release
+          publish: cd projects/stage05 && npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-          TURBO_TEAM: rocketseat
