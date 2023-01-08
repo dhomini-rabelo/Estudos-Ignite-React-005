@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 16
 
+      - run: cd projects/stage05
+
       - run: npm i
 
       - run: npm run build
