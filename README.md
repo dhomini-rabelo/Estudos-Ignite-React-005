@@ -28,8 +28,6 @@ O Design System é muito útil para padronizar projetos e seguir padrões numa e
 projeto está separado em 6 módulos.
 </p>
 
-<br>
-
 <ul>
 
 <li>
